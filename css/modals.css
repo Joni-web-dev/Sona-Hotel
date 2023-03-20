@@ -1,0 +1,85 @@
+.modal_search {
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: #19191a;
+
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal_search.active {
+    opacity: 1;
+    visibility: visible;
+    transition: all 300ms ease;
+}
+
+.modal_search .close_btn {
+    position: absolute;
+    right: 70px;
+    top: 50px;
+}
+
+.modal_search .close_btn button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #111;
+    border: none;
+    color: #fff;
+    font-size: 45px;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+.modal_search .close_btn button:hover {
+    background-color: #333;
+}
+
+.modal_search form input {
+    display: block;
+    width: 800px;
+    height: 60px;
+    font-size: 30px;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 5px solid #fff;
+    outline: none;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.modal_search form input::placeholder {
+    color: #333;
+}
+
+input[type="search"]::-webkit-search-cancel-button {display: none;}
+
+.modal_search form {
+    position: relative;
+}
+
+.modal_search form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55px;
+    height: calc(100% - 5px);
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
